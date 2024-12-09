@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+<body>
+    <Script>
+        // Task 2
+    function LargestWord(str) {
+    let words = str.split(" ");
+    let largest = "";
+    for (let i = 0; i < words.length; i++) {
+        if (words[i].length > largest.length) {
+            largest = words[i];
+        }
+    }
+    return largest;
+}
+
+let result = LargestWord("I am mayada Elnady and I love Web development");
+console.log("largest word is : " + result);
+    </Script>
+</body>
+</html>

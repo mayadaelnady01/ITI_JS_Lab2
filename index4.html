@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+<body>
+<script>
+    function CircleArea() {
+            let radius = prompt("What is the value of your circle's radius");
+            if (!isNaN(radius)) {
+                alert("Total area of the circle is : " + Math.PI * Math.pow(radius, 2) );
+            } else {
+                alert("Input is not accepted. Please enter a valid number.");
+            }
+        }
+        CircleArea();
+
+        function SquareRoot() {
+            let value = prompt("What is the value you want to calculate its square root?");
+            if (!isNaN(value) && value >= 0) {
+                alert("Square root of "+ value + " is "+ Math.sqrt(value));
+            } else {
+                alert("Invalid input! Please enter a non-negative number.");
+            }
+        }
+        SquareRoot();
+
+        function Cosine() {
+            let angle = prompt("Enter an angle to calculate its cosine:");
+            if (!isNaN(angle)) {
+                let rad = angle * (Math.PI / 180);
+                let cosValue = Math.cos(rad);
+                document.write("cos of  "+ angle + " is "+ cosValue);
+            } else {
+                alert("Invalid input! Please enter a valid number.");
+            }
+        }
+        Cosine();
+</script>
+</body>
+</html>

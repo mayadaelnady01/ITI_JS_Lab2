@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+<body>
+    <script>
+        // Task 3
+        let arr = [];
+       for(let i=1;i<=5;i++){
+        let vr = prompt("Enter one number then press enter.Five numbers are needed ");
+        if (!isNaN(vr)) {
+        arr.push(vr);
+      } else {
+        alert("Input is not a number .Please enter a number.");
+        i--; 
+      }
+       }
+       document.write("<h1>Sorting</h1>");
+       document.write("<hr>");
+       document.write("<span style='color: red;'>u've entered the values of </span> " + arr + "<br>" );
+       let des = arr.sort((a, b) => b - a); 
+       document.write("<span style='color: red;'>ur values after being sorted descending: </span>" + des +"<br>");
+       let asc = arr.sort((a, b) => a - b);
+       document.write("<span style='color: red;'>ur values after being sorted ascending: </span>" + asc  + "<br>" );
+    </script>
+    
+</body>
+</html>

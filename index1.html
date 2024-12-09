@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+</head>
+<body>
+    <script>
+        // Task 1
+        function Name() { //taking name and make sure it is a string 
+        let name;
+        while (true) {
+          name = prompt("Please enter your name:");
+           if (name && isNaN(name)) {
+                 return name;} 
+           else {
+            alert("Input is not accepted. Name must be a string.");}
+                   }
+       }
+
+    function PhoneNumber() { // taking a phone number and make sure it is a number with 8 digits
+        let phoneNo;
+        while (true) {
+       phoneNo = prompt("Enter your telephone number must be 8 digits :");
+        if (/^\d{8}$/.test(phoneNo)) {
+          return phoneNo;} 
+        else {
+          alert("Input is not accepted. number must be exactly 8 digits.");}
+            }}
+
+    function MobileNumber() { // taking a mobile number and make sure it starts with 10, 011, or 012 and must be 11 digits
+        let  mobileNo;
+        while (true) {
+        mobileNo = prompt("Enter your mobile number :");
+        if (/^(010|011|012)\d{8}$/.test(mobileNo)) {
+          return mobileNo;}
+         else {
+          alert("Input is not accepted. please try again");}}
+        }
+    function Email() { // take email and make sure it's valid
+    let email;
+      while (true) {
+        email = prompt("Enter your email address :");
+        if (/^\w+@\w+\.\w+$/.test(email)) {
+          return email;
+        } else {
+          alert("Input is not accepted. Please enter a valid email.");
+        }
+      }
+    }
+    let name =Name();
+    let phoneNo =PhoneNumber();
+    let mobileNo =MobileNumber();
+    let email =Email();
+
+    //bonus point 
+    let color;
+    while (true) {
+      color = prompt("Choose a text color for the output (red or green or blue):").toLowerCase();
+      if (["red", "green", "blue"].includes(color)) {
+        break;
+      } else {
+        alert("Invalid color choice. Please enter red, green, or blue.");
+      }
+    }
+
+    document.write("<h1>entering user info</h1><hr>");
+    document.write("<span style=color:"+color+";>Welcome dear guest </span>"+name+"<br>");
+    document.write("<span style=color:"+color+";>Your telephone number is </span>"+phoneNo+"<br>");
+    document.write("<span style=color:"+color+";>Your mobile number is </span>"+mobileNo+"<br>");
+    document.write("<span style=color:"+color+";>Your email address is </span>"+email+"<br>");
+
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+
+    let d1 = new Date();
+    let day=d1.getDay();
+    document.write("today is "+day+"<br>"); 
+    let month=d1.getMonth()+1;
+    document.write("we are in month "+month+"<br>");
+
+    </script>
+</body>
+</html>
